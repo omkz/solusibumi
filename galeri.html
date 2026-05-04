@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Lengkap | CV Solusi Bumi Lestari</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/img/navbar-logo1.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <style>
+        .gallery-page-header {
+            padding-top: 140px;
+            padding-bottom: 40px;
+            background: var(--light);
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar shrink">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/1_CV SOLUSI BUMI LESTARI.png" alt="Solusi Bumi Lestari Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Beranda</a></li>
+                <li><a href="index.html#services">Layanan</a></li>
+                <li><a href="index.html#gallery">Galeri</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="gallery-page-header">
+        <div class="container">
+            <a href="index.html#gallery" class="back-btn"><i class="fas fa-arrow-left"></i> Kembali</a>
+            <h1>Semua Dokumentasi Proyek</h1>
+            <p>Kumpulan foto pengerjaan proyek dari seluruh wilayah operasional kami.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="gallery-grid" id="full-gallery">
+                <!-- Gallery items will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/img/1_CV SOLUSI BUMI LESTARI.png" alt="Logo">
+                </div>
+                <p>&copy; 2025 CV Solusi Bumi Lestari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/6282242785778" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        const galleryContainer = document.getElementById('full-gallery');
+        
+        // Loop through 34 images
+        for (let i = 1; i <= 34; i++) {
+            const fileName = i <= 12 ? `gallery (${i}).jpg` : `gallery(${i}).jpg`;
+            const item = document.createElement('a');
+            item.href = `assets/img/${fileName}`;
+            item.setAttribute('data-lightbox', 'full-projects');
+            item.className = 'gallery-item';
+            
+            item.innerHTML = `
+                <img src="assets/img/${fileName}" alt="Proyek ${i}" loading="lazy">
+                <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
+            `;
+            
+            galleryContainer.appendChild(item);
+        }
+    </script>
+</body>
+</html>
