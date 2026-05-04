@@ -12,13 +12,13 @@
     <meta property="og:url" content="https://solusibumilestari.com/">
     <meta property="og:title" content="CV Solusi Bumi Lestari | Konsultan Lingkungan & Sipil">
     <meta property="og:description" content="Solusi profesional untuk AMDAL, UKL-UPL, PBG, dan SLF di Jawa Tengah.">
-    <meta property="og:image" content="assets/img/header-bg1.jpg">
+    <meta property="og:image" content="assets/img/header-bg1.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="CV Solusi Bumi Lestari | Konsultan Lingkungan & Sipil">
     <meta property="twitter:description" content="Solusi profesional untuk AMDAL, UKL-UPL, PBG, dan SLF di Jawa Tengah.">
-    <meta property="twitter:image" content="assets/img/header-bg1.jpg">
+    <meta property="twitter:image" content="assets/img/header-bg1.webp">
 
     <!-- JSON-LD Local Business -->
     <script type="application/ld+json">
@@ -65,9 +65,6 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
-    
-    <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 </head>
 <body>
 
@@ -184,28 +181,28 @@
                 <p>Dokumentasi pengerjaan proyek dan hasil kerja tim lapangan kami.</p>
             </div>
             <div class="gallery-grid">
-                <a href="assets/img/gallery (1).jpg" data-lightbox="projects" class="gallery-item">
-                    <img src="assets/img/gallery (1).jpg" alt="Proyek 1" loading="lazy">
+                <a href="assets/img/gallery (1).webp" data-lightbox="projects" class="gallery-item">
+                    <img src="assets/img/gallery (1).webp" alt="Proyek 1" loading="lazy">
                     <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
                 </a>
-                <a href="assets/img/gallery (2).jpg" data-lightbox="projects" class="gallery-item">
-                    <img src="assets/img/gallery (2).jpg" alt="Proyek 2" loading="lazy">
+                <a href="assets/img/gallery (2).webp" data-lightbox="projects" class="gallery-item">
+                    <img src="assets/img/gallery (2).webp" alt="Proyek 2" loading="lazy">
                     <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
                 </a>
-                <a href="assets/img/gallery (3).jpg" data-lightbox="projects" class="gallery-item">
-                    <img src="assets/img/gallery (3).jpg" alt="Proyek 3" loading="lazy">
+                <a href="assets/img/gallery (3).webp" data-lightbox="projects" class="gallery-item">
+                    <img src="assets/img/gallery (3).webp" alt="Proyek 3" loading="lazy">
                     <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
                 </a>
-                <a href="assets/img/gallery (5).jpg" data-lightbox="projects" class="gallery-item">
-                    <img src="assets/img/gallery (5).jpg" alt="Proyek 4" loading="lazy">
+                <a href="assets/img/gallery (5).webp" data-lightbox="projects" class="gallery-item">
+                    <img src="assets/img/gallery (5).webp" alt="Proyek 4" loading="lazy">
                     <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
                 </a>
-                <a href="assets/img/gallery (6).jpg" data-lightbox="projects" class="gallery-item">
-                    <img src="assets/img/gallery (6).jpg" alt="Proyek 5" loading="lazy">
+                <a href="assets/img/gallery (6).webp" data-lightbox="projects" class="gallery-item">
+                    <img src="assets/img/gallery (6).webp" alt="Proyek 5" loading="lazy">
                     <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
                 </a>
-                <a href="assets/img/gallery (7).jpg" data-lightbox="projects" class="gallery-item">
-                    <img src="assets/img/gallery (7).jpg" alt="Proyek 6" loading="lazy">
+                <a href="assets/img/gallery (7).webp" data-lightbox="projects" class="gallery-item">
+                    <img src="assets/img/gallery (7).webp" alt="Proyek 6" loading="lazy">
                     <div class="gallery-overlay"><span>Klik untuk perbesar</span></div>
                 </a>
             </div>
@@ -270,8 +267,16 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Custom Lightbox Modal -->
+    <div id="lightbox-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <span class="prev-modal">&#10094;</span>
+        <span class="next-modal">&#10095;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
