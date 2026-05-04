@@ -57,14 +57,41 @@
     }
     </script>
     
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="assets/img/header-bg1.webp" fetchpriority="high">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/navbar-logo1.svg">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome (Non-blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
+    <!-- Critical CSS (Inlined for Performance) -->
+    <style>
+        :root {
+            --primary: #059669; --primary-dark: #064e3b; --primary-light: #ecfdf5;
+            --secondary: #d97706; --secondary-dark: #92400e; --secondary-light: #fffbeb;
+            --dark: #0f172a; --slate: #475569; --light: #f8fafc; --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.8);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--white); overflow-x: hidden; }
+        h1, h2 { font-family: 'Outfit', sans-serif; font-weight: 700; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 80px; display: flex; align-items: center; background: var(--glass); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo img { height: 45px; width: auto; }
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; color: var(--white); position: relative; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/img/header-bg1-mobile.webp') center/cover no-repeat; }
+        @media (min-width: 969px) { .hero { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/img/header-bg1.webp'); } }
+        .hero h1 { font-size: clamp(2.25rem, 5vw, 4rem); margin-bottom: 1.5rem; }
+        .btn { display: inline-block; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; cursor: pointer; border: none; font-family: 'Outfit', sans-serif; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+    </style>
+
+    <!-- Main CSS (Non-blocking) -->
+    <link rel="stylesheet" href="css/index.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/index.css"></noscript>
 </head>
 <body>
 
