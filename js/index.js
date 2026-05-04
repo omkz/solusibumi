@@ -10,14 +10,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Simple Mobile Menu (Optional expansion)
+    // Mobile Menu Toggle
     const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.nav-links');
     
     if(toggle) {
         toggle.addEventListener('click', () => {
-            // Add mobile menu logic if needed
-            alert('Mobile menu coming soon!');
+            navLinks.classList.toggle('active');
+            const icon = toggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
     }
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = toggle.querySelector('i');
+            if(icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    });
 });
